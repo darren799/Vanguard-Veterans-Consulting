@@ -8,9 +8,10 @@
   --light: #f6f4ef;
   --white: #ffffff;
   --gray: #5f6872;
-  --border: rgba(255, 255, 255, 0.14);
   --shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
 }
+
+/* RESET */
 
 * {
   box-sizing: border-box;
@@ -18,61 +19,73 @@
   padding: 0;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
-  font-family: "Inter", Arial, sans-serif;
-  color: var(--navy);
+  font-family: "Inter", sans-serif;
   background: var(--light);
+  color: var(--navy);
   line-height: 1.6;
 }
 
 .container {
-  width: min(1120px, 92%);
-  margin: 0 auto;
+  width: min(1100px, 92%);
+  margin: auto;
 }
 
+/* TYPOGRAPHY */
+
 h1, h2, h3, h4 {
-  font-family: "Oswald", Arial, sans-serif;
+  font-family: "Oswald", sans-serif;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
-  line-height: 1.15;
 }
 
 a {
   text-decoration: none;
-  color: inherit;
 }
 
 /* NAVBAR */
 
 .navbar {
+  background: var(--navy-dark);
+  color: var(--white);
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(6, 20, 35, 0.96);
-  color: var(--white);
-  border-bottom: 1px solid var(--border);
-  backdrop-filter: blur(10px);
 }
 
 .nav-content {
-  min-height: 78px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
 }
 
+/* LOGO FIX */
+
 .logo {
-  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+}
+
+.logo span {
+  font-size: 1rem;
   color: var(--white);
 }
+
+/* NAV LINKS */
 
 nav {
   display: flex;
   gap: 20px;
+}
+
+nav a {
+  color: var(--white);
   font-size: 0.9rem;
 }
 
@@ -86,12 +99,9 @@ nav a:hover {
 .btn-primary {
   background: var(--red);
   color: var(--white);
-  padding: 12px 18px;
+  padding: 10px 16px;
   border-radius: 4px;
-  font-weight: 600;
-  text-transform: uppercase;
   font-size: 0.8rem;
-  transition: 0.2s;
 }
 
 .btn:hover,
@@ -99,28 +109,33 @@ nav a:hover {
   background: #7f1c18;
 }
 
-/* HERO */
+/* HERO (FIXED — NO IMAGE) */
 
 .hero {
-  min-height: 650px;
+  min-height: 600px;
   display: flex;
   align-items: center;
   color: var(--white);
-  background:
-    linear-gradient(rgba(6, 20, 35, 0.9), rgba(6, 20, 35, 0.7)),
-    url("images/vanguard-logo.png");
-  background-size: cover;
-  background-position: center;
+  background: var(--navy);
+  padding: 40px 0;
 }
 
 .hero h2 {
-  font-size: 3rem;
-  margin-bottom: 20px;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
 }
 
 .hero p {
   max-width: 500px;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
+}
+
+/* VETERAN BADGE */
+
+.veteran-badge {
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 10px;
 }
 
 /* FEATURES */
@@ -137,32 +152,33 @@ nav a:hover {
 }
 
 .features div {
-  padding: 20px;
   border-left: 4px solid var(--gold);
+  padding: 15px;
 }
 
 /* SERVICES */
 
 .services {
-  padding: 80px 0;
   background: var(--navy);
   color: var(--white);
+  padding: 80px 0;
 }
 
 .services h2 {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .card {
   background: #102b49;
-  padding: 25px;
+  padding: 20px;
   border-radius: 8px;
 }
 
 .price {
   color: var(--gold);
-  font-size: 1.5rem;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
 }
 
 /* PROCESS */
@@ -188,9 +204,9 @@ nav a:hover {
 /* CTA */
 
 .cta {
-  padding: 60px 0;
   background: var(--navy);
   color: var(--white);
+  padding: 60px 0;
   text-align: center;
 }
 
@@ -198,54 +214,57 @@ nav a:hover {
 
 .contact {
   padding: 80px 0;
-  background: var(--white);
   text-align: center;
+  background: var(--white);
 }
 
 .contact-intro {
-  max-width: 700px;
-  margin: 0 auto 25px;
+  margin-bottom: 20px;
   color: var(--gray);
-  font-size: 1.05rem;
 }
 
-/* Calendly Widget */
+/* CALENDLY */
 
 .calendly-inline-widget {
-  max-width: 950px;
+  max-width: 900px;
   margin: 0 auto 25px;
-  border-radius: 12px;
+  border-radius: 10px;
   overflow: hidden;
   box-shadow: var(--shadow);
-  background: var(--white);
 }
 
-/* Email Contact */
+/* INTAKE BOX */
+
+.intake-box {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 25px;
+  background: var(--light);
+  border-left: 4px solid var(--gold);
+  border-radius: 8px;
+}
+
+.intake-box p {
+  margin-bottom: 15px;
+}
+
+/* EMAIL */
 
 .contact-email {
   margin-top: 20px;
-  font-size: 1rem;
-  color: var(--gray);
 }
 
 .contact-email a {
   color: var(--gold);
-  font-weight: 600;
-}
-
-.contact-email a:hover {
-  text-decoration: underline;
+  font-weight: bold;
 }
 
 /* DISCLAIMER */
 
 .disclaimer {
-  margin-top: 25px;
+  margin-top: 20px;
   font-size: 0.9rem;
   color: var(--gray);
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* FOOTER */
@@ -253,13 +272,13 @@ nav a:hover {
 .footer {
   background: var(--navy-dark);
   color: var(--white);
-  padding: 20px;
   text-align: center;
+  padding: 20px;
 }
 
-.footer p:nth-child(2) {
-  color: var(--gold);
-  margin: 5px 0;
+.footer-logo {
+  height: 40px;
+  margin-bottom: 10px;
 }
 
 /* RESPONSIVE */
@@ -276,6 +295,6 @@ nav a:hover {
   }
 
   .hero h2 {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 }
