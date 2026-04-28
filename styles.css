@@ -206,25 +206,46 @@ nav a:hover {
   max-width: 700px;
   margin: 0 auto 25px;
   color: var(--gray);
+  font-size: 1.05rem;
 }
 
-/* Calendly Styling */
+/* Calendly Widget */
 
 .calendly-inline-widget {
-  max-width: 900px;
-  margin: 0 auto;
-  border-radius: 10px;
+  max-width: 950px;
+  margin: 0 auto 25px;
+  border-radius: 12px;
   overflow: hidden;
   box-shadow: var(--shadow);
   background: var(--white);
 }
 
+/* Email Contact */
+
+.contact-email {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: var(--gray);
+}
+
+.contact-email a {
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.contact-email a:hover {
+  text-decoration: underline;
+}
+
 /* DISCLAIMER */
 
 .disclaimer {
-  margin-top: 30px;
+  margin-top: 25px;
   font-size: 0.9rem;
   color: var(--gray);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* FOOTER */
@@ -234,6 +255,11 @@ nav a:hover {
   color: var(--white);
   padding: 20px;
   text-align: center;
+}
+
+.footer p:nth-child(2) {
+  color: var(--gold);
+  margin: 5px 0;
 }
 
 /* RESPONSIVE */
@@ -246,5 +272,10 @@ nav a:hover {
 
   .nav-content {
     flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero h2 {
+    font-size: 2.2rem;
   }
 }
