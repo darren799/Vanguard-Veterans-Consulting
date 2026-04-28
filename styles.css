@@ -298,3 +298,9 @@ nav a:hover {
     font-size: 2rem;
   }
 }
+.flag-icon {
+  height: 16px;
+  width: auto;
+  margin-right: 6px;
+  vertical-align: middle;
+}
