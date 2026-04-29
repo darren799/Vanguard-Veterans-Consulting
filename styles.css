@@ -155,24 +155,40 @@ nav a:hover {
   margin-bottom: 20px;
 }
 
-/* PAGE HEADER (OTHER PAGES) */
+/* PAGE HERO */
 
-.page-header {
-  background: var(--navy);
+.page-hero {
+  position: relative;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
   color: var(--white);
   text-align: center;
-  padding: 90px 0;
+  background-image: url("images/hero-bg.png");
+  background-size: cover;
+  background-position: center;
 }
 
-.page-header h2 {
+.page-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(6, 20, 35, 0.82);
+}
+
+.page-hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.page-hero h2 {
   font-size: clamp(2.5rem, 5vw, 3.5rem);
   margin-bottom: 15px;
 }
 
-.page-header p {
+.page-hero p {
   max-width: 700px;
   margin: auto;
-  color: #d7dce2;
+  color: #e8edf2;
 }
 
 /* VETERAN BADGE */
@@ -248,11 +264,63 @@ nav a:hover {
   gap: 20px;
 }
 
-/* ABOUT */
+/* TESTIMONIALS */
 
-.about {
+.testimonials {
+  background: var(--light);
   padding: 80px 0;
   text-align: center;
+}
+
+.testimonials h2 {
+  margin-bottom: 40px;
+}
+
+.testimonial-card {
+  background: var(--white);
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  text-align: left;
+}
+
+.testimonial-card p {
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+.testimonial-card h4 {
+  color: var(--gold);
+}
+
+/* FAQ */
+
+.faq {
+  background: var(--white);
+  padding: 80px 0;
+}
+
+.faq h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.faq-item {
+  max-width: 800px;
+  margin: 0 auto 25px;
+  padding: 20px;
+  background: var(--light);
+  border-left: 4px solid var(--gold);
+  border-radius: 6px;
+}
+
+.faq-item h4 {
+  margin-bottom: 8px;
+  color: var(--navy);
+}
+
+.faq-item p {
+  color: var(--gray);
 }
 
 /* CTA */
@@ -277,8 +345,6 @@ nav a:hover {
   color: var(--gray);
 }
 
-/* CALENDLY */
-
 .calendly-inline-widget {
   max-width: 900px;
   margin: 0 auto 25px;
@@ -286,8 +352,6 @@ nav a:hover {
   overflow: hidden;
   box-shadow: var(--shadow);
 }
-
-/* INTAKE BOX */
 
 .intake-box {
   max-width: 700px;
@@ -298,27 +362,9 @@ nav a:hover {
   border-radius: 8px;
 }
 
-.intake-box p {
-  margin-bottom: 15px;
-}
-
-/* EMAIL */
-
-.contact-email {
-  margin-top: 20px;
-}
-
 .contact-email a {
   color: var(--gold);
   font-weight: bold;
-}
-
-/* DISCLAIMER */
-
-.disclaimer {
-  margin-top: 20px;
-  font-size: 0.9rem;
-  color: var(--gray);
 }
 
 /* FOOTER */
@@ -351,34 +397,4 @@ nav a:hover {
   .hero h2 {
     font-size: 2rem;
   }
-}
-/* TESTIMONIALS */
-
-.testimonials {
-  background: var(--light);
-  padding: 80px 0;
-  text-align: center;
-}
-
-.testimonials h2 {
-  margin-bottom: 40px;
-}
-
-.testimonial-card {
-  background: var(--white);
-  padding: 25px;
-  border-radius: 8px;
-  box-shadow: var(--shadow);
-  text-align: left;
-}
-
-.testimonial-card p {
-  font-style: italic;
-  margin-bottom: 15px;
-  color: var(--navy);
-}
-
-.testimonial-card h4 {
-  color: var(--gold);
-  font-size: 0.9rem;
 }
