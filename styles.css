@@ -1,5 +1,7 @@
 /* Vanguard Veterans Consulting - styles.css */
 
+/* VARIABLES */
+
 :root {
   --navy: #0b1f35;
   --navy-dark: #061423;
@@ -119,11 +121,12 @@ nav a:hover {
   background: #7f1c18;
 }
 
-/* HERO */
+/* ===================================== */
+/* UNIFIED HERO COMPONENT */
+/* ===================================== */
 
 .hero {
   position: relative;
-  min-height: 650px;
   display: flex;
   align-items: center;
   color: var(--white);
@@ -132,6 +135,18 @@ nav a:hover {
   background-position: center;
   background-repeat: no-repeat;
   background-color: var(--navy);
+}
+
+/* Homepage hero (large, left aligned) */
+.hero--home {
+  min-height: 650px;
+  text-align: left;
+}
+
+/* Interior page hero (shorter, centered) */
+.hero--page {
+  min-height: 420px;
+  text-align: center;
 }
 
 .hero-overlay {
@@ -146,6 +161,10 @@ nav a:hover {
   max-width: 700px;
 }
 
+.hero--page .hero-content {
+  margin: auto;
+}
+
 .hero h2 {
   font-size: clamp(2.5rem, 5vw, 4rem);
   margin-bottom: 15px;
@@ -153,41 +172,6 @@ nav a:hover {
 
 .hero p {
   margin-bottom: 20px;
-}
-
-/* PAGE HERO */
-
-.page-hero {
-  position: relative;
-  min-height: 420px;
-  display: flex;
-  align-items: center;
-  color: var(--white);
-  text-align: center;
-  background-image: url("images/hero-bg.png");
-  background-size: cover;
-  background-position: center;
-}
-
-.page-hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(6, 20, 35, 0.82);
-}
-
-.page-hero-content {
-  position: relative;
-  z-index: 2;
-}
-
-.page-hero h2 {
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
-  margin-bottom: 15px;
-}
-
-.page-hero p {
-  max-width: 700px;
-  margin: auto;
   color: #e8edf2;
 }
 
